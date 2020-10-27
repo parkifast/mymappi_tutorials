@@ -11,4 +11,4 @@ Pasos:
 
 ## Registro
 
-![Try it free](1_home_try_it_free.png)
+![Try it free](img/1_home_try_it_free.png)
