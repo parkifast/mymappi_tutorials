@@ -3,12 +3,12 @@
 To get started with mymappi APIs, let's do an example.
 
 Suppose we want to show where is our shop in a map located in our brand website. We know the 
-address of our shop, but our web map only understand coordinates (latitude and longitude). 
+address of our shop, but our web map only understands coordinates (latitude and longitude). 
 How can we get coordinates from an address?
 
 Simple, using mymappi Direct Geocoding API.
 
-To do that, we are goint to follow the next steps:
+To do that, we are going to follow the next steps:
 
 1. Sign up to get our API Key.
 2. Check documentation and test Direct Geocoding request.
@@ -50,7 +50,7 @@ Perfect! Now we have the coordinates for our shop, let's show it in a map.
 
 ## Create a map
 
-To create a map we are goint to use [Leaflet](https://leafletjs.com/), an open source JavaScript library 
+To create a map we are going to use [Leaflet](https://leafletjs.com/), an open source JavaScript library 
 used to build web mapping applications.
 
 Just create the map centered in our shop coordinates.
