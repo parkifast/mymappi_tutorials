@@ -67,7 +67,7 @@ var marker = L.marker([40.4199692, -3.7000911]).addTo(mymap);
 
 This is the result.
 
-![Getting Started Map](images/map)
+![Getting Started Map](images/map.png)
 
 All the code from map.html
 
