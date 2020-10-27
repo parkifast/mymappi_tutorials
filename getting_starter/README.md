@@ -28,6 +28,6 @@ Nos logeamos y clicamos en el menú sobre el botón de myapi y API Token.
 En esta pantalla obtendremos nuestra API Key, podemos ver el plan que tenemos y 
 un enlace a la documentación que utilizaremos en el siguiente apartado.
 
-![API Key](img/9_api_key.png)
+![API Key](img/9_apikey.png)
 
 ## Ver documentación y probar consulta
