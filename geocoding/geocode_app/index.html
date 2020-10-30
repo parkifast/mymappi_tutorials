@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
+  <!-- Head -->
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -32,9 +32,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Title -->
     <title>mymappi Geocoding Web App</title>
+    <!-- Javascript file with functions -->
     <script src="main.js"></script>
   </head>
+  <!-- Body -->
   <body class="bg-light">
     <!-- Body container -->
     <div #container class="container">
@@ -43,12 +46,12 @@
         <div #header class="col-12 mt-5">
           <h1>
             <span class="font-weight-bold" style="color: #f1045f">mymappi</span>
-            Geocoding API Example
+            Geocode APP
           </h1>
         </div>
         <!-- Form -->
         <!-- Direct or Reverse radio buttons -->
-        <div #geocoding_radio class="col-12 mt-4">
+        <div #geocode_radio class="col-12 mt-4">
           <div class="form-group">
             <div class="font-weight-bold">
               Select Direct (address to coordinates) or Reverse (coordinates to
@@ -60,18 +63,18 @@
                   class="form-check-input"
                   type="radio"
                   name="inlineRadioOptions"
-                  id="direct"
+                  id="form-radio-direct"
                   value="direct"
                   checked="checked"
                 />
-                <label class="form-check-label" for="inlineRadio1">Direct</label>
+                <label class="form-check-label" for="direct">Direct</label>
               </div>
               <div class="form-check form-check-inline">
                 <input
                   class="form-check-input"
                   type="radio"
                   name="inlineRadioOptions"
-                  id="reverse"
+                  id="form-raido-reverse"
                   value="reverse"
                 />
                 <label class="form-check-label" for="reverse">Reverse</label>
@@ -80,7 +83,7 @@
           </div>
         </div>
         <!-- Input text -->
-        <div #geocoding_input class="col-12">
+        <div #geocode_input class="col-12">
           <div class="form-group">
             <label class="font-weight-bold" for="to_geocode"
               >Complete the input with coordinates or an address.</label
@@ -90,18 +93,17 @@
               class="form-control w-75 mt-1"
               id="to_geocode"
               value="Gran Vía, 68, Madrid"
-              aria-describedby="emailHelp"
             />
-            <small id="emailHelp" class="form-text text-muted"
+            <small #direct-geocode-help class="form-text text-muted"
               >Address: Gran Vía, 68, Madrid</small
             >
-            <small id="emailHelp" class="form-text text-muted"
+            <small #reverse-geocode-help class="form-text text-muted"
               >Coordinates: 40.4199692,-3.7000911</small
             >
           </div>
         </div>
         <!-- Submit button -->
-        <div #geocoding_button class="col-12">
+        <div #geocode_button class="col-12">
           <div class="form-group">
             <div class="font-weight-bold mb-2">Click on Geocode! button.</div>
             <div>
@@ -109,9 +111,10 @@
             </div>
           </div>
         </div>
+        <!-- Geocode results -->
         <div #geocode_results class="col-12 mt-4">
           <h4 class="font-weight-bold">Results</h4>
-          <div id="status"></div>
+          <div id="reponse_status"></div>
           <div id="results_output">Complete the form and click Geocode!</div>
         </div>
       </div>
