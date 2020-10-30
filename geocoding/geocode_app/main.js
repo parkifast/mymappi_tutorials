@@ -1,5 +1,5 @@
 // myapi APIKEY, you can find yours in https://dashboard.mymappi.com/api/token
-const APIKEY = "2300bc7b-1ba0-4c7b-8336-c9a2cff48a99";
+const APIKEY = <YOUR_API_KEY>;
 
 // Some default and useful variables
 let method = "direct";
