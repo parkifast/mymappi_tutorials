@@ -10,4 +10,4 @@ the response.
 
 Geocode!
 
-![Geocode APP](images/app.png)
+![Geocode APP](app.png)
