@@ -37,6 +37,9 @@ def generate_url():
         destinations += str(i) + ";"
     return BASE_URL + PROFILE + coordinates[:len(coordinates)-1] + "?apikey=" + APIKEY + "&destinations=" + destinations[:len(destinations)-1] + "&sources=" + sources[:len(sources)-1] + "&annotations=" + ANNOTATIONS
 
+def find_minimum(m, value):
+    return np.argwhere(m==value)
+
 def find_driver(m):
     return np.argmin(np.transpose(m.min(axis=1)), axis=1)[0,0]
 
@@ -71,24 +74,29 @@ response = r.json()
 
 durations = response["data"]["durations"]
 durations_matrix = np.asmatrix(durations)
+const_durations_matrix = np.asmatrix(durations)
 
-print(durations_matrix)
+print(const_durations_matrix)
 
 for row in durations_matrix:
     # Find minimum duration time
+    m = find_minimum(const_durations_matrix, durations_matrix.min(axis=0).min(axis=1))
+    print(m)
+    # Find driver and passenger
     d = find_driver(durations_matrix)
     print(d)
     p = find_passenger(durations_matrix)
     print(p)
     # Allocate driver and passenger and populate json file
     allocations.append({
-        "driver": drivers[d],
-        "passenger": passengers[p],
+        "driver": drivers[m[0,0]],
+        "passenger": passengers[m[0,1]],
         "duration": durations_matrix[d,p]
     })
     # Delete driver and passenger from matrix
     durations_matrix = np.delete(durations_matrix, d, 0)
     durations_matrix = np.delete(durations_matrix, p, 1)
+    print(const_durations_matrix)
     print(durations_matrix)
 
 dict_allocations = {
