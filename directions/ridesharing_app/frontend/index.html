@@ -52,10 +52,13 @@
     <div id="map"></div>
     <script>
 
+        // Set constants
+        const BACKEND_URL = `http://192.168.1.29:8000`;
         const MAP_CENTER = [40.427964, -3.695935];
         const DRIVER_ICON = L.icon({iconUrl: 'driver.svg', iconSize: 30});
         const PASSENGER_ICON = L.icon({iconUrl: 'passenger.svg', iconSize: 30});
 
+        // Setup map
         const map = L.map('map').setView([MAP_CENTER[0], MAP_CENTER[1]], 15);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
             maxZoom: 18,
@@ -65,24 +68,24 @@
             zoomOffset: -1
         }).addTo(map);
 
-        function performBackendRequest() {
-            URL = `http://192.168.1.29:8000`;
+        /**
+        * Perform the request to the allocation API endpoind
+        **/
+        function getAllocations() {
             // Create HTTP Request
-            var xmlHttp = new XMLHttpRequest();
+            let xmlHttp = new XMLHttpRequest();
             // Send the request
-            xmlHttp.open("GET", URL, false);
+            xmlHttp.open("GET", BACKEND_URL, false);
             // Close HTML Request
             xmlHttp.send(null);
             // Return data field from response to show on result section
             return JSON.parse(xmlHttp.responseText).data;
         }
 
-        const data = performBackendRequest();
-        console.log(data);
+        const data = getAllocations();
 
+        // Plot response on the map
         for (let i = 0; i < data.length; i++) {
-            console.log(i);
-            console.log(data[i].duration);
             // Set markers
             let driver = L.marker([data[i].driver.coordinates[0], data[i].driver.coordinates[1]], {icon: DRIVER_ICON}).addTo(map);
             let passenger = L.marker([data[i].passenger.coordinates[0], data[i].passenger.coordinates[1]], {icon: PASSENGER_ICON}).addTo(map);
