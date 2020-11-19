@@ -62,6 +62,7 @@
             xmlHttp.open("GET", URL, false);
             // Close HTML Request
             xmlHttp.send(null);
+            console.log(JSON.parse(xmlHttp.responseText).data);
             // Return data field from response to show on result section
             return JSON.parse(xmlHttp.responseText).data;
         }
@@ -81,12 +82,12 @@
             iconSize:     30,
         });
 
-        var marker = L.marker([data.sources[0][0], data.sources[0][1]], {icon: carIcon}).addTo(mymap);
-        var marker = L.marker([data.destinations[0][0], data.destinations[0][1]], {icon: passengerIcon}).addTo(mymap);
+        var marker = L.marker([data[0].driver.coordinates[0], data[0].driver.coordinates[1]], {icon: carIcon}).addTo(mymap);
+        var marker = L.marker([data[0].passenger.coordinates[0], data[0].passenger.coordinates[1]], {icon: passengerIcon}).addTo(mymap);
 
         var latlngs = [
-    [data.sources[0][0], data.sources[0][1]],
-    [data.destinations[0][0], data.destinations[0][1]]
+    [data[0].driver.coordinates[0], data[0].driver.coordinates[1]],
+    [data[0].passenger.coordinates[0], data[0].passenger.coordinates[1]]
 ];
 
 var polyline = L.polyline(latlngs, {color: 'green'}).addTo(mymap);
