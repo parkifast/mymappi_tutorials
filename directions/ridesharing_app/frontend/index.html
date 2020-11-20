@@ -53,7 +53,7 @@
     <script>
 
         // Set constants
-        const BACKEND_URL = `http://127.0.0.1:8000`;
+        const BACKEND_URL = "http://127.0.0.1:8000";
         const MAP_CENTER = [40.427964, -3.695935];
         const DRIVER_ICON = L.icon({iconUrl: 'driver.svg', iconSize: 30});
         const PASSENGER_ICON = L.icon({iconUrl: 'passenger.svg', iconSize: 30});
@@ -95,7 +95,7 @@
                 [data[i].driver.coordinates[0], data[i].driver.coordinates[1]],
                 [data[i].passenger.coordinates[0], data[i].passenger.coordinates[1]]
             ], {color: 'green'}).addTo(map);
-            polyline.bindTooltip(data[i].duration + "s.", {permanent: true, direction:"center"}).openTooltip();
+            polyline.bindTooltip(data[i].duration + " s", {permanent: true, direction:"center"}).openTooltip();
         }
     </script>
 </body>
