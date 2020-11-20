@@ -53,14 +53,14 @@
     <script>
 
         // Set constants
-        const BACKEND_URL = `http://192.168.1.29:8000`;
+        const BACKEND_URL = `http://127.0.0.1:8000`;
         const MAP_CENTER = [40.427964, -3.695935];
         const DRIVER_ICON = L.icon({iconUrl: 'driver.svg', iconSize: 30});
         const PASSENGER_ICON = L.icon({iconUrl: 'passenger.svg', iconSize: 30});
 
         // Setup map
         const map = L.map('map').setView([MAP_CENTER[0], MAP_CENTER[1]], 15);
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=YOUR_ACCESS_TOKEN', {
             maxZoom: 18,
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
             id: 'mapbox/light-v9',

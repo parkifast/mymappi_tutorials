@@ -8,7 +8,7 @@ import numpy as np
 # url: more info in https://api.mymappi.com/docs
 BASE_URL = "https://api.mymappi.com/v1/directions/matrix/"
 PROFILE = "car/"
-APIKEY = "2300bc7b-1ba0-4c7b-8336-c9a2cff48a99"
+APIKEY = <YOUR_API_KEY>
 ANNOTATIONS = "duration,distance"
 # Number of passengers and drivers
 N = random.randint(3,8)

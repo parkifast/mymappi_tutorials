@@ -5,6 +5,7 @@ import os, json
 # Simple HTTP Server to simulate a Backend API 
 # to response matrix request from a Frontend APP.
 
+URL = "127.0.0.1"
 PORT = 8000
 
 class RequestHandler(http.server.SimpleHTTPRequestHandler):
@@ -20,5 +21,5 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(data.encode())
 
 with socketserver.TCPServer(("", PORT), RequestHandler) as httpd:
-    print(f"Serving at http://127.0.0.1:{PORT}")
+    print(f"Serving at http://{URL}:{PORT}")
     httpd.serve_forever()
