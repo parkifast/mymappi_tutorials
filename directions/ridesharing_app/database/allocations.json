@@ -1,1 +1,14 @@
-{"timestamp": 1605864430, "data": [{"driver": {"id": "driver-1", "coordinates": [40.42729401487107, -3.7080592345391077]}, "passenger": {"id": "passenger-2", "coordinates": [40.42483048800657, -3.7045916368712093]}, "duration": 155.4}, {"driver": {"id": "driver-2", "coordinates": [40.418017188096414, -3.6966942087269037]}, "passenger": {"id": "passenger-1", "coordinates": [40.42895575709332, -3.6893795211104097]}, "duration": 160.3}, {"driver": {"id": "driver-0", "coordinates": [40.43649746305027, -3.6854208060360167]}, "passenger": {"id": "passenger-0", "coordinates": [40.41946171807012, -3.7142968092584328]}, "duration": 530.0}]}
+{
+    "timestamp": 1605864430, 
+    "data": [
+        {"driver": {"id": "driver-1", "coordinates": [40.42729401487107, -3.7080592345391077]}, 
+        "passenger": {"id": "passenger-2", "coordinates": [40.42483048800657, -3.7045916368712093]}, 
+        "duration": 155.4}, 
+        {"driver": {"id": "driver-2", "coordinates": [40.418017188096414, -3.6966942087269037]}, 
+        "passenger": {"id": "passenger-1", "coordinates": [40.42895575709332, -3.6893795211104097]}, 
+        "duration": 160.3}, 
+        {"driver": {"id": "driver-0", "coordinates": [40.43649746305027, -3.6854208060360167]}, 
+        "passenger": {"id": "passenger-0", "coordinates": [40.41946171807012, -3.7142968092584328]}, 
+        "duration": 530.0}
+    ]
+}
