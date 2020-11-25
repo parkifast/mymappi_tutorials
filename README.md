@@ -1,6 +1,6 @@
-# myapi API Samples and Tutorials
+# mymappi API Samples and Tutorials
 
-**Welcome to myapi repository!**
+**Welcome to mymappi repository!**
 
 Here, we upload samples and tutorials from our APIs.
 
